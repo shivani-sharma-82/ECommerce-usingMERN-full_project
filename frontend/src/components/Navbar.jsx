@@ -6,13 +6,13 @@ import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
     const [visible,setVisible]=useState(false);
-    const {setShowSearch,getCartCount,navigate,token,setToken,setCartItems}=useContext(ShopContext);
+    const {setShowSearch,getCartCount,navigate,token,setToken,setcartItems}=useContext(ShopContext);
     const logout=()=>{
         navigate("/login")
 
         localStorage.removeItem("token")
         setToken("")
-        setCartItems([])
+        setcartItems([])
     }
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
